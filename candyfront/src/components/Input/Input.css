@@ -1,0 +1,66 @@
+/* src/components/Input/Input.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Контейнер для всего компонента */
+.input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 367px;
+  height: 52px;
+  font-family: Roboto, serif;
+  background-color: #fff;
+  line-height: 1.5;
+}
+
+/* Стили для самого поля ввода */
+.input__field {
+  width: 100%;
+  padding: 17px 14px 15px 12px;
+  font-size: 16px;
+
+  color: #000000;
+  transition: border-color 0.3s;
+}
+
+/* Состояние фокуса */
+.input--focus .input__field,
+.input__field:focus {
+  border-color: #518581;
+  outline: none;
+}
+
+/* Состояние ошибки */
+.input__field--error {
+  border-color: red;
+}
+
+/* Состояние отключения */
+.input__field--disabled {
+  background-color: #ffffff;
+  cursor: not-allowed;
+  border-color: #ffffff;
+}
+
+/* Когда есть иконка */
+.input--has-icon .input__field {
+  padding-right: 44px; /* Добавляем отступ для иконки */
+}
+
+/* Контейнер для иконки справа */
+.input__after-slot {
+  position: absolute;
+  right: 12px;
+  display: flex;
+  align-items: center;
+}
+
+/* Стили для состояния пустого поля */
+.input__field:placeholder-shown {
+  /* Можно добавить стили для пустого поля */
+}
+
+/* Стили для непустого поля */
+.input__field:not(:placeholder-shown) {
+  /* Можно добавить стили для непустого поля */
+}

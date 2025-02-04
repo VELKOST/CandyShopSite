@@ -1,0 +1,44 @@
+@import "./variables.scss";
+
+/* Сброс базовых отступов и размеров */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+/* Опционально: убираем стандартное оформление ссылок */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Опционально: убираем стандартные стили списков */
+ul, ol {
+    list-style: none;
+}
+
+/* Улучшаем читаемость шрифтов */
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #FAFAFA;
+}
+
+/* Убираем стандартные стили кнопок */
+button, input, textarea {
+    font: inherit;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+/* Улучшение отображения изображений */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}

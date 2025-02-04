@@ -1,0 +1,16 @@
+$gray-color: #333;
+
+
+@mixin square($size, $border-radius: none) {
+  width: $size;
+  height: $size;
+
+  @if ($border-radius != none){
+    border-radius: $border-radius;
+  }
+}
+
+$space-xl: 48px;
+$space-m: 24px;
+$text-secondary: #AFADB5;
+$text-primary:#000000;

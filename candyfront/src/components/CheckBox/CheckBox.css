@@ -1,0 +1,57 @@
+/* src/components/CheckBox/CheckBox.css */
+
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox--disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.checkbox__input {
+  display: none;
+}
+
+.checkbox__box {
+  width: 40px; /* Размер самого контейнера */
+  height: 40px;
+  border: 1px solid #ffffff;
+  background-color: #fff;
+  position: relative;
+  transition: border-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox__icon {
+  width: 30px; /* Размеры SVG */
+  height: 23px;
+  margin-top: 2px; /* Параметр регулирует сдвиг вниз */
+}
+
+.checkbox__input:checked + .checkbox__box {
+  border-color: #fff;
+  background-color: #fff; /* Сохраняем белый фон */
+}
+
+.checkbox__input:disabled + .checkbox__box {
+  background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный белый фон */
+  border: 0px solid rgba(255, 255, 255, 0.8);
+}
+
+.checkbox:hover .checkbox__box {
+  border-color: #518581; /* Цвет границы при наведении */
+}
+
+.checkbox:hover:not(.checkbox--disabled) .checkbox__box {
+  border-color: #518581; /* Цвет границы при наведении, только если не disabled */
+}
+
+.checkbox--disabled .checkbox__icon {
+  opacity: 0.6;
+}

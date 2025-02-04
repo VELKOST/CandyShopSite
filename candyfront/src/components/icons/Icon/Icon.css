@@ -1,0 +1,22 @@
+/* src/components/icons/Icon.css */
+:root {
+  --primary-color: #518581; /* Цвет из макета */
+  --color-primary: #000000;
+  --color-secondary: #afadb5;
+}
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon--color-primary {
+  color: #000000;
+}
+
+.icon--color-secondary {
+  color: #afadb5;
+}
+
+.icon--color-accent {
+  color: #518581;
+}

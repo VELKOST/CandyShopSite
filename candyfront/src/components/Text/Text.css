@@ -1,0 +1,81 @@
+/* Определение переменных */
+:root {
+  --font-size-title: 32px;
+  --font-size-p20: 20px;
+  --font-size-p18: 18px;
+  --font-size-p16: 16px;
+  --font-size-p14: 14px;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --color-primary: #000000;
+  --color-secondary: #afadb5;
+  --color-accent: #ff0000;
+}
+
+/* Базовый стиль текста */
+.text {
+  margin: 0;
+  padding: 0;
+  color: inherit; /* Наследуем цвет от родителя */
+}
+
+/* Стили для view */
+.text--view-title {
+  font-size: var(--font-size-title);
+  font-weight: var(--font-weight-bold);
+}
+
+.text--view-button {
+  font-size: var(--font-size-p16);
+  font-weight: var(--font-weight-medium);
+}
+
+.text--view-p-20 {
+  font-size: var(--font-size-p20);
+}
+
+.text--view-p-18 {
+  font-size: var(--font-size-p18);
+}
+
+.text--view-p-16 {
+  font-size: var(--font-size-p16);
+}
+
+.text--view-p-14 {
+  font-size: var(--font-size-p14);
+}
+
+/* Стили для weight (имеют приоритет над view) */
+.text--weight-normal {
+  font-weight: var(--font-weight-normal);
+}
+
+.text--weight-medium {
+  font-weight: var(--font-weight-medium);
+}
+
+.text--weight-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+/* Стили для цвета */
+.text--color-primary {
+  color: var(--color-primary);
+}
+
+.text--color-secondary {
+  color: var(--color-secondary);
+}
+
+.text--color-accent {
+  color: var(--color-accent);
+}
+
+/* Класс для ограничения количества строк */
+.text--with-max-lines {
+  /* Можно добавить дополнительные стили при необходимости */
+}

@@ -1,0 +1,107 @@
+/* Card.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  --text-secondary: #afadb5;
+  --text-primary: #000000;
+  --card-width: 349px;
+}
+
+/* Основной контейнер карточки */
+.card {
+  font-family: Roboto, serif;
+  display: flex;
+  flex-direction: column;
+  width: var(--card-width);
+  max-height: 100%;
+  overflow: hidden;
+  transition:
+    transform 0s,
+    box-shadow 0s;
+  gap: 24px;
+  padding-bottom: 24px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* Контейнер для изображения */
+.card__image-container {
+  width: var(--card-width);
+  height: var(--card-width);
+  position: relative;
+  overflow: hidden;
+  background-color: #d9d9d9;
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Содержимое карточки */
+.card__content {
+  font-family: Roboto, serif;
+  width: 100%;
+  padding: 0 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  height: 214px;
+}
+
+/* Основной контент */
+.card__main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Слот для текста над заголовком */
+.card__caption {
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  line-height: 18px;
+}
+
+/* Заголовок карточки */
+.card__title {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 24px;
+}
+
+/* Подзаголовок карточки */
+.card__subtitle {
+  color: var(--text-secondary);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+/* Футер карточки */
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Цена */
+.card__content-slot {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Слот для кнопки */
+.card__action-slot {
+  /* Можно добавить отступы или выравнивание при необходимости */
+}

@@ -1,0 +1,68 @@
+/* Button.css */
+
+/* Базовые стили кнопки */
+
+.button {
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  height: 52px; /* Фиксированная высота для кнопки */
+  min-width: 52px; /* Минимальная ширина */
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+  color: white;
+  background-color: #518581; /* Цвет по умолчанию */
+}
+
+/* Состояние наведения */
+.button:hover:not(.button--disabled):not(.button--active):not(
+    .button--loading
+  ) {
+  background-color: #86aaa7; /* Более светлый оттенок при наведении */
+}
+
+/* Состояние отключено */
+.button--disabled {
+  background-color: #d9d9d9;
+  color: white; /* Текст белый при отключении */
+  cursor: not-allowed;
+}
+
+/* Состояние активное */
+.button:active:not(.button--disabled):not(.button--loading) {
+  background-color: #487773; /* Более тёмный оттенок при нажатии */
+}
+
+/* Состояние загрузки */
+.button--loading {
+  position: relative;
+}
+
+/* При одновременном disabled и loading фон остаётся стандартным */
+.button--loading.button--disabled {
+  background-color: #d9d9d9; /* Цвет по умолчанию */
+}
+
+/* Позиционирование значка загрузки */
+.loader {
+  margin-right: 10px; /* Отступ между значком загрузки и текстом */
+  width: 16px;
+  height: 16px;
+}
+
+/* Белый цвет значка загрузки */
+.loader path {
+  stroke: white;
+  fill: white;
+}
+.button--no-hover:hover {
+  background-color: #518581; /* Цвет кнопки без изменения при наведении */
+  color: white;
+}

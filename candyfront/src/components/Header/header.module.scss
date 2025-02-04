@@ -1,0 +1,111 @@
+@import "../../styles/variables";
+
+// Контейнер шапки
+.header {
+  background-color: #ffffff;
+  border-bottom: 2px solid #f3f3f3;
+  height: 90px;
+  display: grid;
+  align-items: center;
+
+  /* Сетка: 3 колонки — лого (auto), навигация (1fr), иконки (auto) */
+  grid-template-columns: auto 1fr auto;
+
+  /* Отступы слева и справа по 5% (или 100px, если нужно фиксированно) */
+  padding: 0 5%;
+}
+
+// Логотип и текст
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  &-icon {
+    height: 42px;
+  }
+
+  /* Текстовое название (можно <span> вместо <p>) */
+  &-text {
+    font-size: 22px;
+    font-weight: bold;
+  }
+}
+
+// Навигация (центральная колонка)
+.header__nav {
+  display: flex;
+  justify-content: center; /* Центрируем по горизонтали */
+  ul {
+    display: flex;
+    gap: 24px; /* переменная $space-xl, например */
+    list-style: none;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+
+  }
+  a {
+    text-decoration: none;
+    color: #333;
+    &:hover {
+      color: #007bff;
+    }
+  }
+}
+
+// Блок иконок (правая колонка)
+.header__icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+// Единый класс для иконок
+.icon {
+  width: 28px;
+  height: 28px;
+  position: relative;
+
+  transition: color 0.2s;
+
+
+}
+
+
+
+.navLink {
+  position: relative;
+  color: #333;            /* Обычный цвет текста */
+  text-decoration: none;  /* Убираем подчеркивание */
+
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: #158856;         /* Цвет при ховере (опционально) */
+}
+
+/* Стили для активного пункта */
+.activeLink {
+  color: #158856; /* Зеленый цвет текста */
+  padding-bottom: 33px;/* Отступ снизу, чтобы поместить линию */
+
+  /* Способ 1: через border-bottom */
+  border-bottom: 2px solid #158856;
+
+  /* Или способ 2: через псевдоэлемент*/
+
+   //position: relative;
+   //
+   //&::after {
+   // content: "";
+   //  position: absolute;
+   //  bottom: 0;
+   //  left: 0;
+   //  width: 100%;
+   //  height: 2px;
+   //  background-color: currentColor;
+   //}
+
+}
